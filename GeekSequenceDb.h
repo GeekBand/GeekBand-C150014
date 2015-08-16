@@ -17,11 +17,15 @@ namespace Geek
 {
     class GeekSequenceDb : public GeekDb
     {
+    public:
+        
         GeekResult InsertKeyValue (INPARAN const GeekKeyValue& entry) ;
         GeekResult UpdateKeyValue (INPARAN const GeekKeyValue& entry) ;
         GeekResult DeleteKeyValue (INPARAN const std::string& strkey) ;
         GeekResult QueryKeyValue (INPARAN const std::string& strkey,
                                           OUTPARAM const std::vector<GeekKeyValue> entries) ;
+    private:
+        std::vector<GeekKeyValue> m_vecdb;
         
     };
 }

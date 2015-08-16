@@ -12,10 +12,12 @@ namespace Geek
 {
     GeekResult GeekSequenceDb::InsertKeyValue (INPARAN const GeekKeyValue& entry)
     {
+        m_vecdb.push_back(entry);
         return GEEK_SUCCESS;
     }
     GeekResult GeekSequenceDb::UpdateKeyValue (INPARAN const GeekKeyValue& entry)
     {
+        
         return GEEK_SUCCESS;
     }
     GeekResult GeekSequenceDb::DeleteKeyValue (INPARAN const std::string& strkey)
